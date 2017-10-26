@@ -17,9 +17,11 @@
 package org.jboss.as.quickstarts.rshelloworld;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 
 /**
  * A simple REST service which is able to say hello to someone using HelloService Please take a look at the web.xml where JAX-RS
@@ -38,6 +40,7 @@ public class HelloWorld {
     @Path("/json")
     @Produces({ "application/json" })
     public String getHelloWorldJSON() {
+    	logUserPrincipal();
         return "{\"result\":\"" + helloService.createHelloMessage("World") + "\"}";
     }
 
@@ -45,7 +48,15 @@ public class HelloWorld {
     @Path("/xml")
     @Produces({ "application/xml" })
     public String getHelloWorldXML() {
+    	logUserPrincipal();
         return "<xml><result>" + helloService.createHelloMessage("World") + "</result></xml>";
     }
 
+    @Context 
+	HttpServletRequest servletRequest;
+	
+    public void logUserPrincipal() {
+    	String currentUser = servletRequest.getUserPrincipal().getName();
+        System.out.println("***** " + currentUser);
+    }
 }

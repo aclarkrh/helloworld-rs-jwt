@@ -1,0 +1,7 @@
+{
+    "realm": "helloworld-rs-jwt",
+    "bearer-only": true,
+    "auth-server-url": "https://rhsso:8443/auth",
+    "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0brMJNZF406ksMpcHgKFXfPQHHs7T3mYLzQiWxJEnhdr5tFx3ptrZ9t5VNswlwCmDDNFb9lxyLf3gxCpf387cWeU0C/pmtn1AB/wWj0RSlK12mtMqTaAq263qqzz7mzXDcXOl64nVU/86xcOAjD65ydUyhiCvGDsHqedWxXTL5dP8Jqav1vFM4TbgSBh8i9cttWrB8UFCmWt/n9rHH7JckAkL4j/GlS70fqBA65XR8ZaGUV8uaTtiaiEU5PpAzccbfasef07weGJREXYUiIlYijxRJHA/WTHhZQoWwOLPqWcyOD2ynCFducD+N9q6wrPnj8OYRLd2k1WygLTI2KGLwIDAQAB",
+    "resource": "helloworld-rs-jwt"
+  }
